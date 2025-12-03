@@ -1,0 +1,30 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: MATLAB
+message: lenguaje m
+type: software
+authors:
+  - given-names: Duran
+    name-particle: 'Sofia '
+    email: l2221752@tectijuana.edu.mx
+  - given-names: 'Galindo '
+    name-particle: Belen
+    email: l2221755@tectijuana.edu.mx
+  - given-names: 'Sifuentes '
+    name-particle: Anadali
+    email: l22212273@tectijuana.edu.mx
+  - given-names: Valle
+    name-particle: Ana
+    email: l2221769@tectijuana.edu.mx
+repository-code: 'https://github.com/AKamilaValle/ProyectoMSF.git'
+keywords:
+  - Circuito RLC
+  - Controlador PID
+  - Sistema renal
+  - Nefropatía diabética
+  - Modelo matemático
+license: BSD-2-Clause
+version: '1.0'
+date-released: '2025-12-03'
