@@ -25,13 +25,13 @@ La asignatura de Modelado de Sistemas Fisiológicos forma parte del plan de estu
 
 ## Objetivos
 
-\1. Calcular la función de transferencia.
-\2. Determinar el modelo de ecuaciones integro-diferenciales.
-\3. Calcular el error en estado estacionario y la estabilidad en lazo abierto.
-\4. Emular y simular la respuesta del circuito en Simulink/Simscape con una señal de impulso.
-\5. Sintonizar las ganancias de un controlador PID para eliminar el error entre la entrada y la salida del sistema con la nefropatía.
-\6. Obtener la respuesta en lazo abierto y en lazo cerrado con el controlador PID con la función de transferencia.
-\7. Diseñar el modelo fisiológico del sistema (control y caso) en BioRender.
+1. Calcular la función de transferencia.
+2. Determinar el modelo de ecuaciones integro-diferenciales.
+3. Calcular el error en estado estacionario y la estabilidad en lazo abierto.
+4. Emular y simular la respuesta del circuito en Simulink/Simscape con una señal de impulso.
+5. Sintonizar las ganancias de un controlador PID para eliminar el error entre la entrada y la salida del sistema con la nefropatía.
+6. Obtener la respuesta en lazo abierto y en lazo cerrado con el controlador PID con la función de transferencia.
+7. Diseñar el modelo fisiológico del sistema (control y caso) en BioRender.
 
 ## Descripción detallada del sistema
 
@@ -92,9 +92,7 @@ Para representar la dinámica del sistema renal, se establece una analogía entr
 - Representa la resistencia al flujo sanguíneo que entra al glomérulo
 - Controla la presión de filtración glomerular
 - **Control (sano)**: R1 = 100 Ω
-- **Caso (diabético)**: R1 = 70 Ω
-
-*Justificación del cambio*: En la nefropatía diabética, la arteriola aferente experimenta vasodilatación, reduciendo su resistencia en aproximadamente 30%. Este cambio es responsable del fenómeno de hiperfiltración glomerular característico de las etapas iniciales de la enfermedad.
+- **Caso (diabético)**: R1 = 250 Ω
 
 **L - Inductancia del flujo sanguíneo glomerular**
 - Representa la inercia de la masa de sangre en los capilares glomerulares
@@ -102,31 +100,23 @@ Para representar la dinámica del sistema renal, se establece una analogía entr
 - **Control**: L = 50 mH
 - **Caso**: L = 50 mH
 
-*Justificación*: La inercia del flujo sanguíneo no se modifica significativamente en la nefropatía diabética, ya que depende principalmente de las propiedades físicas de la sangre (densidad, viscosidad), que permanecen relativamente constantes.
-
 **C1 - Compliance glomerular**
 - Representa la distensibilidad de los capilares glomerulares y la cápsula de Bowman
 - Modela la capacidad de almacenamiento temporal del filtrado
 - **Control**: C1 = 100 μF
-- **Caso**: C1 = 150 μF
-
-*Justificación del cambio*: El glomérulo diabético experimenta dilatación e hipertrofia, aumentando su compliance en aproximadamente 50%. Esta mayor distensibilidad permite acomodar el incremento del volumen de filtrado durante la hiperfiltración.
+- **Caso**: C1 = 180 μF
 
 **R2 - Resistencia de la arteriola eferente y sistema tubular**
 - Representa la resistencia combinada de la arteriola eferente y la fricción tubular
 - Controla la presión de salida del glomérulo y el flujo a través de los túbulos
 - **Control**: R2 = 150 Ω
-- **Caso**: R2 = 200 Ω
-
-*Justificación del cambio*: La nefropatía diabética produce vasoconstricción relativa de la arteriola eferente (hialinosis arteriolar) y fibrosis de los túbulos renales, incrementando la resistencia total en aproximadamente 33%.
+- **Caso**: R2 = 300 Ω
 
 **C2 - Compliance tubular**
 - Representa la distensibilidad de los túbulos renales
 - Modela la capacidad de almacenamiento y reabsorción tubular
 - **Control**: C2 = 200 μF
-- **Caso**: C2 = 120 μF
-
-*Justificación del cambio*: La fibrosis túbulo-intersticial característica de la nefropatía diabética reduce la distensibilidad de los túbulos en aproximadamente 40%. Los túbulos se vuelven rígidos y pierden su capacidad de expansión y reabsorción eficiente.
+- **Caso**: C2 = 350 μF
 
 **Descripción funcional:**
 - **Ve(t)**: Presión arterial sistémica (entrada del sistema) = 120 V ≈ 120 mmHg
@@ -154,8 +144,6 @@ Palabras clave: Circuito RLC; Controlador PID; Sistema renal; Nefrona; Nefropat�
 ## Referencias
 \[1] P. A. Valle, Syllabus para Modelado de Sistemas Fisiológicos, Tecnológico Nacional de México / Instituto Tecnológico de Tijuana, Tijuana, B.C., México, 2025. Permalink: https://biomath.xyz/course/
 
-\[2] M. C. Khoo, Physiological Control Systems Analysis Simulation, and Estimation, 2nd ed. Piscataway, New Jersey, USA: IEEE Press, 2018, Section 4, Page 93.
+\[2] L. C. Segovia Cañar, F. D. Carranza López, y D. S. Baño Mora, "Manejo de la nefropatía diabética: Artículo de revisión," LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, vol. VI, no. 1, pp. 116–127, enero, 2025. doi: 10.56712/latam.v6i1.3314.
 
-\[3] N. S. Nise, Control Systems Engineering, 8th ed. Hoboken, New Jersey, USA: John Wiley & Sons, 2020.
-
-\[4] T. Kind, T. J. Faes, J. W. Lankhaar, A. Vonk-Noordegraaf & M. Verhaegen, "Estimation of three-and four-element Windkessel parameters using subspace model identification", IEEE Transactions on Biomedical Engineering, vol. 57, issue 7, pp. 1531-1538, Jul 2010. https://doi.org/10.1109/TBME.2010.2041351
+\[3] S. Zheng, D. Carugo, A. Mosayyebi, B. Turney, F. Burkhard, D. Lange, D. Obrist, S. Waters, and F. Clavica, "Fluid mechanical modeling of the upper urinary tract," WIREs Mechanisms of Disease, vol. 13, no. 6, art. no. e1523, 2021, doi: 10.1002/wsbm.1523.
