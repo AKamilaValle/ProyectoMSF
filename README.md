@@ -134,12 +134,12 @@ Para representar la dinámica del sistema renal, se establece una analogía entr
 Palabras clave: Circuito RLC; Controlador PID; Sistema renal; Nefrona; Nefropatía diabética; Modelo matemático; Simulaciones numéricas; Filtración glomerular.
 
 ## Lista de archivos incluidos en el repositorio
-\1. Cuaderno computacional de MATLAB [.mlx].
-\2. Modelo de Simulink [.slx].
-\3. Archivos de Spyder [.py].
-\4. Imagen con los parámetros del controlador.
-\5. Imágenes de las simulaciones [.pdf y .png].
-\6. Evidencia del análisis matemático: función de transferencia, modelo de ecuaciones integro-diferenciales, error en estado estacionario y estabilidad en lazo abierto.
+1. Cuaderno computacional de MATLAB [.mlx].
+2. Modelo de Simulink [.slx].
+3. Archivos de Spyder [.py].
+4. Imagen con los parámetros del controlador.
+5. Imágenes de las simulaciones [.pdf y .png].
+6. Evidencia del análisis matemático: función de transferencia, modelo de ecuaciones integro-diferenciales, error en estado estacionario y estabilidad en lazo abierto.
 
 ## Referencias
 \[1] P. A. Valle, Syllabus para Modelado de Sistemas Fisiológicos, Tecnológico Nacional de México / Instituto Tecnológico de Tijuana, Tijuana, B.C., México, 2025. Permalink: https://biomath.xyz/course/
