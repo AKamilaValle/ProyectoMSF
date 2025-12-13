@@ -2,7 +2,7 @@
 
 # Proyecto: Sistema de la nefrona
 
-## Información de la estudiante
+## Información de las estudiantes
 Durán Sofía \[22211752]; l22211752@tectijuana.edu.mx
 Galindo Belén \[22211755]; l22211755@tectijuana.edu.mx
 Sifuentes Anadalí \[22212273]; l22212273@tectijuana.edu.mx
